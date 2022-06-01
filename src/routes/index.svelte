@@ -12,6 +12,10 @@
 	} 
 </script>
 
+<svelte:head>
+	<title>TB Shitposting Tools</title>
+</svelte:head>
+
 <div class="nav">
 	<h1 class="title">TB Shitposting Tools</h1>
 </div>
