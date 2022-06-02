@@ -8,6 +8,7 @@
 	<meta name="description" content="A collection of tools designed to make shitposting more streamlined.">
 
 	<meta property="og:type" content="website">
+	<meta name="og:site_name" content="TB Shitposting Tools">
 	<meta property="og:url" content="https://theborinator.github.io/">
 	<meta property="og:title" content="TB Shitposting Tools">
 	<meta property="og:description" content="A collection of tools designed to make shitposting more streamlined.">
@@ -18,6 +19,8 @@
 	<meta property="twitter:title" content="TB Shitposting Tools">
 	<meta property="twitter:description" content="A collection of tools designed to make shitposting more streamlined.">
 	<meta property="twitter:image" content="./cover.png">
+
+	<meta name="google-site-verification" content="FUQK_q9RkI64X8M4i6G9uZ_rL3vjdcLsz9QXm-Qzjcc" />
 </svelte:head>
 
 <slot></slot>
