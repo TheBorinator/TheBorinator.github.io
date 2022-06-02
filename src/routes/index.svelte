@@ -1,10 +1,13 @@
 <script>
+	import Tool from '../lib/Tool.svelte';
+	import Tools from '../lib/Tools.svelte';
+	import Spacer from '../lib/Spacer.svelte';
 	let advertURL = null;
 	function getURL() {
 		navigator.clipboard.readText()
 		.then(text => {
-			const result = JSON.parse(text)
-			advertURL = result.addebug_videoId
+			const result = JSON.parse(text);
+			advertURL = result.addebug_videoId;
 		})
 		.catch(err => {
 			advertURL = 'Error'
@@ -12,33 +15,40 @@
 	} 
 </script>
 
-<svelte:head>
-	<title>TB Shitposting Tools</title>
-</svelte:head>
-
 <div class="nav">
 	<h1 class="title">TB Shitposting Tools</h1>
 </div>
 
-<div class="spacer" />
+<Spacer />
 
-<div class="tools">
-	<div class="tool">
+<Tools>
+	<Tool category="Tool">
 		<h3>YouTube advert from debug info</h3>
-		<div class="spacer" />
+		<Spacer />
 		<button on:click={getURL}>Get advert URL from clipboard</button>
 		{#if advertURL !== null}
 			<br>
 			{#if advertURL !== 'Error'}
-				<a href="http://youtu.be/{advertURL}/" target="_blank">
-					<p>http://youtu.be/{advertURL}</p>
-				</a>
+				{#if advertURL == undefined}
+					<p>It looks like you didn't get an advert on the video you linked.</p>
+					<p class="helper">Make sure you get the debug info while the advert is playing.</p>
+				{:else}
+					<a href="http://youtu.be/{advertURL}/" target="_blank">
+						<p>http://youtu.be/{advertURL}</p>
+					</a>
+				{/if}
 			{:else}
-				<p>Error: invalid debug info</p>
+				<p>Invalid debug info</p>
 				<p class="helper">To get the debug info, right click on the video and click 'Copy debug info'</p>
 			{/if}
 		{/if}
-	</div>
-	<div class="tool"><h3>I'll make some more soon</h3></div>
-	<div class="tool"><h3>I'll make some more soon</h3></div>
-</div>
+	</Tool>
+	<Tool category="Music">
+		<h3>Royalty free music that isn't shit</h3>
+		<div class="spacer" />
+		<a href="http://freemusicarchive.org/home" target="_blank">Free Music Archive</a>
+		<br>
+		<a href="http://www.pond5.com/free/music" target="_blank">Pond5 Free Music</a>
+	</Tool>
+	<Tool category="Placeholder"><h3>I'll make some more soon</h3></Tool>
+</Tools>

@@ -15,6 +15,11 @@ h1, h2, h3, h4, h5, h6 {
 	justify-content: center;
 }
 
+.footer {
+	display: flex;
+	justify-content: center;
+}
+
 .title {
 	color: #ececec;
 }
@@ -23,6 +28,7 @@ h1, h2, h3, h4, h5, h6 {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-around;
+	gap: 10px 20px;
 }
 
 .tool {
@@ -36,6 +42,7 @@ h1, h2, h3, h4, h5, h6 {
 	color: #ececec86;
 	font-size: smaller;
 	font-style: italic;
+	margin: 0;
 }
 
 .spacer {
@@ -44,6 +51,10 @@ h1, h2, h3, h4, h5, h6 {
 
 a {
 	color: #acaaff;
+}
+
+a:visited {
+	color: #6562ff;
 }
 
 button {
