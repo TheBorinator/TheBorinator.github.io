@@ -65,3 +65,8 @@ button {
 	border-radius: 3px;
 	font-family: 'JetBrains Mono', monospace;
 }
+
+iframe {
+	border: none;
+	max-width: 20vw;
+}

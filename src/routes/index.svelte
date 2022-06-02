@@ -33,8 +33,15 @@
 					<p>It looks like you didn't get an advert on the video you linked.</p>
 					<p class="helper">Make sure you get the debug info while the advert is playing.</p>
 				{:else}
+					<Spacer />
+					<iframe title="YouTube Embed"
+						src="https://www.youtube.com/embed/{advertURL}">
+					</iframe>
 					<a href="http://youtu.be/{advertURL}/" target="_blank">
-						<p>http://youtu.be/{advertURL}</p>
+						<p>Link to Video</p>
+					</a>
+					<a href="https://projectlounge.pw/ytdl/download?url=https://www.youtube.com/watch?v={advertURL}" download>
+						<p>Download Link</p>
 					</a>
 				{/if}
 			{:else}
