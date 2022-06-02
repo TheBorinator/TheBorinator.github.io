@@ -1,25 +1,31 @@
 <script>
 	import Spacer from '../lib/Spacer.svelte';
+	import { MetaTags } from 'svelte-meta-tags';
 </script>
+
+<MetaTags
+	title="TB Shitposting Tools"
+	titleTemplate="%s | TBST"
+	description="A collection of tools designed to make shitposting more streamlined."
+	canonical="https://theborinator.github.io/"
+	openGraph={{
+		url: 'https://theborinator.github.io/',
+		title: 'TB Shitposting Tools',
+		description: 'A collection of tools designed to make shitposting more streamlined.',
+		images: [
+		{
+			url: 'https://theborinator.github.io/cover.png',
+			width: 640,
+			height: 360,
+			alt: 'TB Shitposting Tools Cover'
+		}
+	],
+	site_name: 'TB Shitposting Tools'
+	}}
+/>
 
 <svelte:head>
 	<title>TB Shitposting Tools</title>
-	<meta name="title" content="TB Shitposting Tools">
-	<meta name="description" content="A collection of tools designed to make shitposting more streamlined.">
-
-	<meta property="og:type" content="website">
-	<meta name="og:site_name" content="TB Shitposting Tools">
-	<meta property="og:url" content="https://theborinator.github.io/">
-	<meta property="og:title" content="TB Shitposting Tools">
-	<meta property="og:description" content="A collection of tools designed to make shitposting more streamlined.">
-	<meta property="og:image" content="./cover.png">
-
-	<meta property="twitter:card" content="summary_large_image">
-	<meta property="twitter:url" content="https://theborinator.github.io/">
-	<meta property="twitter:title" content="TB Shitposting Tools">
-	<meta property="twitter:description" content="A collection of tools designed to make shitposting more streamlined.">
-	<meta property="twitter:image" content="./cover.png">
-
 	<meta name="google-site-verification" content="FUQK_q9RkI64X8M4i6G9uZ_rL3vjdcLsz9QXm-Qzjcc" />
 </svelte:head>
 

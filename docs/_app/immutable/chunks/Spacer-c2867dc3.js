@@ -1,0 +1,1 @@
+import{S as c,i,s as o,e as l,c as h,a as d,d as t,b as m,g as p,n as a}from"./index-fac4f753.js";function u(n){let e;return{c(){e=l("div"),this.h()},l(s){e=h(s,"DIV",{class:!0}),d(e).forEach(t),this.h()},h(){m(e,"class","spacer")},m(s,r){p(s,e,r)},p:a,i:a,o:a,d(s){s&&t(e)}}}class _ extends c{constructor(e){super(),i(this,e,null,u,o,{})}}export{_ as S};

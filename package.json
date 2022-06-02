@@ -16,5 +16,8 @@
 		"gh-pages": "^4.0.0",
 		"svelte": "^3.44.0"
 	},
-	"type": "module"
+	"type": "module",
+	"dependencies": {
+		"svelte-meta-tags": "^2.6.1"
+	}
 }
