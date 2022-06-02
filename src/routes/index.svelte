@@ -44,11 +44,23 @@
 		{/if}
 	</Tool>
 	<Tool category="Music">
-		<h3>Royalty free music that isn't shit</h3>
+		<h3>Royalty free music that isn't crap</h3>
 		<div class="spacer" />
 		<a href="http://freemusicarchive.org/home" target="_blank">Free Music Archive</a>
 		<br>
 		<a href="http://www.pond5.com/free/music" target="_blank">Pond5 Free Music</a>
+		<br>
+		<a href="https://www.pond5.com/search?kw=&media=music&type=free" target="_blank">Pond5 Public Domain Music</a>
+		<br>
+		<a href="https://bandcamp.com/tag/creative-commons" target="_blank">Bandcamp Creative Commons</a>
+		<br>
+		<a href="https://wordpress.org/openverse/search/audio/" target="_blank">Openverse Audio Search</a>
+		<br>
+		<a href="http://dig.ccmixter.org/free" target="_blank">CCMixter</a>
+		<br>
+		<a href="https://soundcloud.com/search/sounds?q&filter.license=to_share" target="_blank">SoundCloud CC Search</a>
+		<br>
+		<a href="https://www.europeana.eu/en/search?page=1&qf=TYPE%3A%22SOUND%22&query=%22%22%20AND%20RIGHTS%3A%2Acreative%2A" target="_blank">Europeana CC Search</a>
 	</Tool>
 	<Tool category="Placeholder"><h3>I'll make some more soon</h3></Tool>
 </Tools>
