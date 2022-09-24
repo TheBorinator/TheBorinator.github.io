@@ -2,7 +2,11 @@
 	import Tool from '../lib/Tool.svelte';
 	import Tools from '../lib/Tools.svelte';
 	import Spacer from '../lib/Spacer.svelte';
+
 	let advertURL = null;
+	let videoURL = null;
+	let imageURL = null;
+
 	function getURL() {
 		navigator.clipboard.readText()
 		.then(text => {
@@ -13,6 +17,19 @@
 			advertURL = 'Error'
 		});
 	} 
+
+	function displayImage()	{
+		videoURL = videoURL
+		.replace('https://', '')
+		.replace('http://', '')
+		.replace('www.', '')
+		.replace('youtube.com', '')
+		.replace('youtu.be', '')
+		.replace('/watch?v=', '');
+		
+		imageURL = `https://i3.ytimg.com/vi/${videoURL}/maxresdefault.jpg`;
+		videoURL = null;
+	}
 </script>
 
 <div class="nav">
@@ -52,7 +69,7 @@
 	</Tool>
 	<Tool category="Music">
 		<h3>Royalty free music that isn't crap</h3>
-		<div class="spacer" />
+		<Spacer />
 		<a href="http://freemusicarchive.org/home" target="_blank">Free Music Archive</a>
 		<br>
 		<a href="http://www.pond5.com/free/music" target="_blank">Pond5 Free Music</a>
@@ -68,6 +85,17 @@
 		<a href="https://soundcloud.com/search/sounds?q&filter.license=to_share" target="_blank">SoundCloud CC Search</a>
 		<br>
 		<a href="https://www.europeana.eu/en/search?page=1&qf=TYPE%3A%22SOUND%22&query=%22%22%20AND%20RIGHTS%3A%2Acreative%2A" target="_blank">Europeana CC Search</a>
+		<br>
+		<a href="https://https://musopen.org/" target="_blank">Musopen</a>
 	</Tool>
-	<Tool category="Placeholder"><h3>I'll make some more soon</h3></Tool>
+	<Tool category="Placeholder">
+		<h3>Get YouTube Thumbnail</h3>
+		<Spacer />
+		<input type="text" placeholder="Video URL" bind:value={videoURL}>
+		<button on:click={displayImage}>Get Thumbnail</button>
+		{#if imageURL !== null}
+			<br>
+			<a href={imageURL} target="_blank">Link to image</a>
+		{/if}
+	</Tool>
 </Tools>

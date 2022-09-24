@@ -70,3 +70,12 @@ iframe {
 	border: none;
 	max-width: 20vw;
 }
+
+input {
+	color: #ececec;
+	border: none;
+	background-color: #4d4d4d;
+	padding: 6px;
+	border-radius: 3px;
+	font-family: 'JetBrains Mono', monospace;
+}
